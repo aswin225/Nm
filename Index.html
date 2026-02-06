@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💖 A Secret For You 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+.box {
+  background: rgba(0,0,0,0.35);
+  padding: 25px;
+  border-radius: 18px;
+  max-width: 450px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+input,button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  margin: 10px;
+  width: 80%;
+}
+button {
+  background: crimson;
+  color: white;
+  font-weight: bold;
+}
+.fade {
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+<div class="box fade">
+  <h1>💌 Hi Namitha 💌</h1>
+
+  <p><b>Decode this secret:</b></p>
+  <h2>9 4 15 14 20   11 14 15 23   23 8 1 20   20 15   19 1 25...</h2>
+
+  <p>Hint: A=1, B=2, C=3 😘</p>
+
+  <input id="ans" placeholder="Enter decoded message">
+  <br>
+  <button onclick="check()">Reveal 💖</button>
+
+  <h2 id="out"></h2>
+</div>
+
+<script>
+function check(){
+  let a = document.getElementById("ans").value.toLowerCase();
+
+  if(a.includes("i dont know what to say")){
+    document.getElementById("out").innerHTML =
+    "💖 I don't know what to say, but I think I'm falling for you 💖<br><br>Will you be my Valentine, Namitha? 🌹🥹";
+  } else {
+    document.getElementById("out").innerHTML =
+    "❌ Almost there... try again cutie 😘";
+  }
+}
+</script>
+</body>
+</html>
